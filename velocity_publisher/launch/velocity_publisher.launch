@@ -1,0 +1,11 @@
+<launch>
+  <arg name="world_name" default="$(find velocity_publisher)/worlds/map.world" />
+  <arg name="model" default="waffle" />
+
+  <!-- Launch turtlebot3 bringup -->
+  <include file="$(find velocity_publisher)/launch/bringup.launch">
+    <arg name="world_name" value="$(arg world_name)" />
+    <arg name="model" value="$(arg model)" />
+  </include>
+
+</launch>

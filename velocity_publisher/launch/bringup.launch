@@ -1,0 +1,36 @@
+<!--<arg name="world_name" default="$(find turtlebot3_gazebo)/worlds/turtlebot3_world.world" />-->
+<launch>
+  <arg name="world_name" default="$(find velocity_publisher)/worlds/map.world" />
+
+  <arg name="model" default="waffle" />
+  <arg name="x" default="-4.0" />
+  <arg name="y" default="-4.5" />
+  <arg name="yaw" default="0" />
+  <arg name="start_rviz" default="false" />
+
+  <!-- Launch gazebo -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_name)" />
+    <arg name="paused" value="false" />
+    <arg name="use_sim_time" value="true" />
+    <arg name="gui" value="true" />
+    <arg name="verbose" value="false" />
+    <arg name="debug" value="false" />
+  </include>
+
+  <!-- Load robot description to the parameter server -->
+  <param name="robot_description"
+         command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro laser_visual:=false"/>
+
+  <!-- Spawn robot model in gazebo -->
+  <node name="spawn_urdf"
+        pkg="gazebo_ros"
+        type="spawn_model"
+        args="-urdf -model turtlebot3_$(arg model) -x $(arg x) -y $(arg y) -Y $(arg yaw) -param robot_description" />
+
+  <!-- Start robot state publisher -->
+  <node name="robot_state_publisher"
+        pkg="robot_state_publisher"
+        type="robot_state_publisher" />
+
+</launch>
