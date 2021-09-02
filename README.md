@@ -81,11 +81,11 @@ algorithm. But RRT is not comparable to these algorithms,
 because it has no cost tracking and rewiring.
 
 2000 iterations
-![2k_iter](comparison2k.png)
+![2k_iter](git_images/comparison2k.png)
 
 
 3000 iterations
-![3k_iter](comaprison3k.png)
+![3k_iter](git_images/comaprison3k.png)
 
 
 ## ROS Gazebo Simulation
@@ -100,10 +100,40 @@ turtlebot.
 
 ![ros_sim](git_images/ros1.gif)
 
+
+### Dependencies
+1) rospy
+2) rospkg
+3) tf
+4) geometry_msgs
+5) sensor_msgs
+
+
 ### How to run the code
 1) The package for running the simulation is named *velocity_publisher*.
 2) Please run the below command to launch the turtlebot3 in the gazebo
 environment:
-3) 
+
+```roslaunch velocity_publisher velocity_publisher.launch```
+
+3) After launching the above file, please run the below command to make the
+robot go to the goal position:
+
+```rosrun velocity_publisher robot_control```
+
+_____________________________________________________________________________
+
+4) If you want to run the planning algorithm run the following command (It will generate a _shortest_path.txt_ file with the waypoint nodes for the robot
+to follow.):
 
 
+```rosrun velocity_publisher rrt_pygame``` **or** 
+
+
+```rosrun velocity_publisher rrt_star_pygame``` **or**
+
+
+```rosrun velocity_publisher rrt_star_quick_pygame```
+
+
+5) Then you can follow steps 2 and 3 again to simulate that path.
