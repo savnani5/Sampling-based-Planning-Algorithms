@@ -53,12 +53,12 @@ After choosing the parent we rewire the near nodes based on
 the ancestor nodes and we append the new node to the node
 list.
 
-In the choose parent function we iterate over all the near
+In the **choose parent** function we iterate over all the near
 nodes and steer each near node towards the new node and
 we return assign then node with the least cost as the parent
 node of the new node.
 
-In the rewire step we iterate over all near nodes and in each
+In the **rewire** step we iterate over all near nodes and in each
 iteration we iterate over ancestor nodes of the new node and
 steer the ancestor nodes to find the least cost path and assign
 it to the near node. The important step in rewiring is the
@@ -81,11 +81,13 @@ algorithm. But RRT is not comparable to these algorithms,
 because it has no cost tracking and rewiring.
 
 2000 iterations
+
 ![2k_iter](git_images/comparison2k.png)
 
 
 3000 iterations
-![3k_iter](git_images/comaprison3k.png)
+
+![3k_iter](git_images/comparison3k.png)
 
 
 ## ROS Gazebo Simulation
