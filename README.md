@@ -78,7 +78,7 @@ number of iterations or the ancestor hierarchy, it will
 improve further. On the other hand RRT* is not far behind
 for small iterations it is almost as good as the Quick
 algorithm. But RRT is not comparable to these algorithms,
-because it has no cost tracking and rewiring.
+because it has no cost tracking and rewiring. For detailed videos to compare each method, refer [this link](https://drive.google.com/drive/folders/12HagFLB4HicrkDu3pMxL4IVsaOBl07qL?usp=sharing).
 
 2000 iterations
 
