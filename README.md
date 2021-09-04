@@ -118,12 +118,12 @@ turtlebot.
 2) Please run the below command to launch the turtlebot3 in the gazebo
 environment:
 
-```roslaunch velocity_publisher velocity_publisher.launch```
+  ```roslaunch velocity_publisher velocity_publisher.launch```
 
 3) After launching the above file, please run the below command to make the
 robot go to the goal position:
 
-```rosrun velocity_publisher robot_control```
+  ```rosrun velocity_publisher robot_control```
 
 _____________________________________________________________________________
 
@@ -131,13 +131,13 @@ _____________________________________________________________________________
 to follow.):
 
 
-```rosrun velocity_publisher rrt_pygame``` **or** 
+  ```rosrun velocity_publisher rrt_pygame``` **or** 
 
 
-```rosrun velocity_publisher rrt_star_pygame``` **or**
+  ```rosrun velocity_publisher rrt_star_pygame``` **or**
 
 
-```rosrun velocity_publisher rrt_star_quick_pygame```
+  ```rosrun velocity_publisher rrt_star_quick_pygame```
 
 
 5) Then you can follow steps 2 and 3 again to simulate that path.
