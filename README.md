@@ -12,6 +12,8 @@ parents. It is shown to have a faster convergence rate without
 being computationally inefficient by using ancestor nodes to
 grow the reservoir of candidate parent nodes.
 
+---
+
 ## RRT(Rapidly-Exploring-Random-Tree)
 RRT works by iteratively sampling a random node in the
 state space and connecting a new node in that direction from
@@ -68,7 +70,7 @@ the children nodes.
 
 ![rrt*_quick](git_images/rrt_star_quick.gif)
 
-
+---
 ## Comparison of the three methods
 It is evident that as we
 increase the number of iterations the RRT*-Quick starts
@@ -89,7 +91,7 @@ because it has no cost tracking and rewiring. For detailed videos to compare eac
 
 ![3k_iter](git_images/comparison3k.png)
 
-
+---
 ## ROS Gazebo Simulation
 This project is simulated in a gazebo world. The world is
 shown in figure 5. It is a 10 x 10 grid with polygon
@@ -102,7 +104,7 @@ turtlebot.
 
 ![ros_sim](git_images/ros1.gif)
 
-
+---
 ### Dependencies
 1) rospy
 2) rospkg
@@ -110,7 +112,7 @@ turtlebot.
 4) geometry_msgs
 5) sensor_msgs
 
-
+---
 ### How to run the code
 1) The package for running the simulation is named *velocity_publisher*.
 2) Please run the below command to launch the turtlebot3 in the gazebo
