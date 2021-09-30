@@ -10,7 +10,7 @@ an improved version of RRT*. RRT*-Quick embarks on the
 observation that the nodes in a local region have common
 parents. It is shown to have a faster convergence rate without
 being computationally inefficient by using ancestor nodes to
-grow the reservoir of candidate parent nodes. For detailed report refer [this link]().
+grow the reservoir of candidate parent nodes. For detailed report refer [this link](https://github.com/savnani5/Sampling-based-Planning-Algorithms/blob/main/Documentation/Report.pdf).
 
 ---
 
