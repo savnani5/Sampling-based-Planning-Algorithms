@@ -93,8 +93,7 @@ because it has no cost tracking and rewiring. For detailed videos to compare eac
 
 ---
 ## ROS Gazebo Simulation
-This project is simulated in a gazebo world. The world is
-shown in figure 5. It is a 10 x 10 grid with polygon
+This project is simulated in a gazebo world. It is a 10 x 10 grid with polygon
 obstacles.ROS provides the capability of creating publishers and
 subscribers. We use two ROS nodes to achieve the
 simulation. The planner node contain the RRT/RRT*/RRT*
